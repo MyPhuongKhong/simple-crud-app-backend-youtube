@@ -2,6 +2,7 @@
   "name": "simple-crud-app-youtube",
   "version": "1.0.0",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "nodemon index.js"
