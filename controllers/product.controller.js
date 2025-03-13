@@ -13,6 +13,12 @@ const getOneProduct = async (req, res) => {
   try {
     const {id} = req.params;
     const product = await Product.findById(id);
+    if (!product) {
+      // Nếu không tìm thấy sản phẩm, trả về mã 404
+      return res.status(404).json({ message: "Product not found" });
+    }
+
+    // Nếu tìm thấy sản phẩm, trả về mã 200 với dữ liệu
     res.status(200).json(product);
 
   } catch (error) {
@@ -40,8 +46,8 @@ const updateProduct = async (req, res) => {
       return res.status(404).json({message: 'Product not found'});
     }
     
-    // Ngc lại, đã tìm thấy thì ktra update chưa?
-    // Bằng cách: tìm tiếp trong CSDL và trả về updatedProduct
+    // Nếu tìm thấy và cập nhật thành công
+    // Sẽ tìm lại sản phẩm đã cập nhật bằng findById và trả về updatedProduct
     const updatedProduct = await Product.findById(id);
 
     res.status(200).json(updatedProduct);

@@ -26,4 +26,3 @@ mongoose.connect('mongodb+srv://myphuongkhong:nv8a1FqPHI8SKdG8@backenddb.iadmd.m
   .catch(() => {
     console.log('Connection failed!')
   });
-
