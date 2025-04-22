@@ -2,20 +2,19 @@
   "name": "simple-crud-app-youtube",
   "version": "1.0.0",
   "main": "index.js",
-  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "type":"module",
+  "type": "module",
   "dependencies": {
     "express": "^4.21.2",
     "mongodb": "^6.14.2",
-    "mongoose": "^8.12.1"
+    "mongoose": "^8.3.4"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
